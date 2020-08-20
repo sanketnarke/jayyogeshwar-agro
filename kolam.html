@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kolam Rice</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.kolam {
+  /*padding: 50px;*/
+  text-align: center;
+  background-color: white;
+  color: #eb9617;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  text-align: center;
+}
+
+/*.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}*/
+
+.dropdwn {
+float:left;
+overflow: hidden;
+}
+
+
+.nav-item{
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+.nav-link{
+padding: 8px 15px;
+border:none;
+outline:none;
+margin:0;
+background-color:white;
+color:black;
+}
+
+
+.navbar-nav button:hover,.nav-item:hover,.dropdwn:hover .dropbtn{
+background-color:#a5eb44;
+text-align: center;
+}
+
+.dwn-content{
+display:none;
+position:absolute;
+background-color:#f9f9f9;
+min-width:150px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index:1;
+}
+
+.dwn-content a{
+float:none;
+color:black;
+background-color:white;
+padding: 12px 16px;
+text-decoration:none;
+display:block;
+text-align:left;}
+
+
+
+.dwn-content a:hover{
+background-color:#a5eb44;
+}
+
+.dropdwn:hover .dwn-content{
+  display:block;
+} 
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 30px;
+}
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+*/
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 30px;
+}
+</style>
+
+</head>
+<body style=" background-color: white">
+<hr style="color: #a5eb44">
+
+<div >
+  <img style="  border: 0px solid #ddd;
+  border-radius: 4px;
+  padding: 0px;
+  width: 270px;"
+  src="logo1.jpg" align="left">
+  <div class="container-fluid" style="background-color:white" >
+  <b><font size="10" color="#a5eb44" face=”shivaji”><b>जय योगेश्वर ॲग्रो इंडस्ट्रीज </b> </font>
+  </b>
+  <h5><font  color="black" face="ink free">ओळख विश्वासाची ,जोड नाविन्यतेची </font></h5>
+</div>
+<hr style="color: #a5eb44" size="100px" >
+
+<nav class="navbar navbar-expand-sm bg-blue" >
+  <ul class="navbar-nav">
+  <div><li class="nav-item">
+  <button class="nav-link"  onclick="home()" style="background-color: #a5eb44"><i class="fa fa-home" style="font-size:20px">मुख्य पान </i></button>
+  </li></div>
+  <div class="dropdwn" >
+  <li class="nav-item">
+      <button class="nav-link" id="dropbtn1" ><i class="fa fa-bars" style="font-size:20px"></i><font color="black">
+      उत्पादने </font></button>
+    </li>
+    <div class="dwn-content">
+      <a class="nav-link" href="indrayani.html"><font color="black">
+      इंद्रायणी</font></a>
+
+      <a class="nav-link" href="kolam.html"><font color="black">
+      वाडा कोलम</font></a>
+
+      <a class="nav-link" href="miniindrayani.html"><font color="black">
+      मिनी इंद्रायणी</font></a>
+    </div></div>
+
+     <div class="dropdwn" >
+  <li class="nav-item">
+      <button class="nav-link" id="dropbtn2" ><a style="color:black;text-decoration:none" href="contact.html"><i class="fa fa-address-book" style="font-size:20px"><font color="black">
+      संपर्क </i></a></font></button>
+    </li>
+  </div>
+  <li class="nav-item">
+     <button class="nav-link"><a style="color:black;text-decoration:none" href="aboutus.html"><font color="black">
+      <i class="fa fa-info-circle" style="font-size:20px">आमच्या बद्दल </i></font></a></button>
+    </li>
+    <div class="dropdwn" >
+    <li class="nav-item">
+      <button class="nav-link" id="dropbtn3" ><i class="fa fa-group" style="font-size:20px"></i><font color="black">
+      Join us</font></button>
+    </li>
+    <div class="dwn-content">
+      <a class="nav-link" href="https://www.facebook.com/Jay-Yogeshwar-Agro-Industries-2416670751910449"><font color="black"><i class="fa fa-facebook" style="font-size:20px">Facebook</i></font></a>
+      <a class="nav-link" href="https://www.youtube.com/channel/UCtxmn4KGRt2Y6R6ABF1kDgQ"><font color="black"><i class="fa fa-youtube-play " style="font-size:20px">Youtube</i></font></a>
+      <a class="nav-link" href="https://www.instagram.com/"><font color="black"><i class="fa fa-instagram" style="font-size:20px">Instagram</i></font></a>
+    </div></div>
+    <div class="dropdwn" >
+    <li class="nav-item">
+     <button class="nav-link"><a style="color:black;text-decoration:none" href="form.html"><font color="black">
+      <i class="fa fa-phone" style="font-size:20px">वितरणासाठी संपर्क </i></font></a></button>
+    </li> 
+  </div>
+  </ul>
+  
+</nav>
+
+<div class="kolam">
+  <h2>वाडा कोलम तांदूळ</h2>
+  <hr style="color: #a5eb44">
+  <img src="wadakolam.jpg" style=" width: 100% ; max-height: 50%"alt="Jane" >
+</div>
+<hr style="color: #a5eb44">
+
+
+
+
+<h2 style="text-align:center">आमची उत्पादने </h2>
+
+<div class="row">
+  <div class="column">
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="deccanKing-removebg-preview.png" alt="Jane" style="width:100%; height:300px;">
+      <div class="container">
+        <h5 style="text-align: center;">डेक्कन किंग</h5>
+        <p class="title">१०/३० किलो पॅकिंग </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="column">
+    <div class="card">
+      <img src="shrikrishna-removebg-preview.png" alt="Jane" style="width:100% ; height:300px;">
+      <div class="container">
+        <h5 style="text-align: center;">श्रीकृष्ण </h5>
+        <p class="title">१०/३० किलो पॅकिंग </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    
+
+    </div>
+ 
+
+
+   
+</div>
+<div class="footer">
+<b>Join us on</b><br/>
+ <div class="social">
+ <a href="#" class="fa fa-facebook" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-twitter" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-google" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-linkedin" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-youtube" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-instagram" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-skype" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+<a href="#" class="fa fa-android" style="text-decoration: none; font-size: 30px;padding: 15px;border-radius: 50%;"></a>
+</div>
+<div align="center">&copy<font color="Black" size="2"><b><u>All Copyrights of this site are reserved</u></b></font></div>
+
+
+<hr>
+</body>
+</html>
